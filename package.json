@@ -1,0 +1,33 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "AresNFT website",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "parcel views/*.html",
+    "prebuild": "rm -rf .cache dist build",
+    "build": "parcel build views/*.html --public-url .",
+    "prepublish": "npm run build && echo 'aresrtx.me' >> dist/CNAME",
+    "publish": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AresNFT/aresnft.github.io.git"
+  },
+  "keywords": [
+    "frontend",
+    "aresnft",
+    "opensea"
+  ],
+  "author": "AresNFT <aresnft.me@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AresNFT/aresnft.github.io/issues"
+  },
+  "homepage": "https://github.com/AresNFT/aresnft.github.io#readme",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.48.0"
+  }
+}
